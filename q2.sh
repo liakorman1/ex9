@@ -1,5 +1,5 @@
 #a
-sed -n '/Sherlock\|Holmes/p' sherlockholmes.txt | wc -l
+sed -En '/Sherlock|Holmes/p' sherlockholmes.txt | wc -l
 #b
 sed -n 's/Sherlock/&\n/gp; s/Holmes/&\n/gp' sherlockholmes.txt | wc -l
 #c
