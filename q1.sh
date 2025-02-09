@@ -12,4 +12,4 @@ awk '{OFS=" ";for (i=2; i<NF; i++) words[$i]++;} END {for (w in words) if (words
 awk '{OFS=" ";for (i=2; i<NF; i++) words[$i]++;} END {for (w in words) print words[w], w;}' aliceinwonderland.txt | sort -h | tail -5
 
 #e
-awk '{OFS=" "; for (i=2; i<NF; i++) {words[$i]++; wordsLength += length($i); sumWords++;}} END {avgLength = wordsLength / sumWords; print avgLength;}' aliceinwonderland.txt
+awk '{OFS=" "; for (i=2; i<NF; i++) {wordsLength += length($i); sumWords++;}} END {avgLength = wordsLength / sumWords; print avgLength;}' aliceinwonderland.txt
