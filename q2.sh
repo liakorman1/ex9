@@ -1,7 +1,7 @@
 #a
 sed -En '/Sherlock|Holmes/p' sherlockholmes.txt | wc -l
 #b
-sed -n 's/Sherlock/&\n/gp; s/Holmes/&\n/gp' sherlockholmes.txt | wc -l
+sed -n 's/Sherlock/&\n/gp; s/Holmes/&\n/gp' sherlockholmes.txt | grep -Eo "Sherlock|Holmes" | wc -l
 #c
 sed 's/^/Hello:/' sherlockholmes.txt
 #d
